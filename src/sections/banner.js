@@ -51,7 +51,7 @@ export default function Banner() {
             victory of the managements that supplies best design system
             guidelines ever.
           </Text>
-          <Flex>
+          <Flex style={{marginTop: '1rem'}}>
             <Button variant="whiteButton" aria-label="Get Started">
               Get Started
             </Button>
@@ -97,22 +97,25 @@ const styles = {
     overflow: ['hidden', 'initial', null, 'hidden'],
     backgroundImage: `url(${BannerBG})`,
     backgroundRepeat: `no-repeat`,
-    backgroundPosition: 'top left',
+    backgroundPosition: 'top-left',
     backgroundSize: 'cover',
-    borderBottomRightRadius: [100, 150, null, null, null, 250],
+    borderBottomRightRadius: [10, 15, null, null, null, 15],
     pt: ['150px', null, null, null, null, null, '140px', '130px'],
     pb: ['100px', null, null, '110px', null, 10, '150px'],
     backgroundColor: 'primary',
+    // width: '100% !important',
     container: {
       display: 'flex',
+      mt: '1rem',
     },
     contentBox: {
       width: ['100%', null, '85%', '55%', '50%', '55%'],
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'flex-start',
+      alignItems: 'center',
       flexShrink: 0,
       pt: [0, null, null, null, null, null, 5, 7],
+      margin: '1rem !important'
     },
     imageBox: {
       display: ['none', null, null, 'block'],
@@ -135,6 +138,7 @@ const styles = {
     pb: [2, null, 0],
   },
   sponsorBox: {
+    
     pt: ['35px', null, null, null, null, '45px'],
     flexDirection: ['column', null, 'row'],
     sponsor: {
