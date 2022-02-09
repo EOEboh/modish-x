@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import React, {useState, useEffect} from 'react';
 import { jsx, Container, Flex, Button } from 'theme-ui';
 import { jsx as xs } from '@emotion/react';
 import { Link } from 'react-scroll';
@@ -10,13 +11,34 @@ import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
 
 export default function Header({ className }) {
+  
+  // for conditional screen rendering
+  const [ width, setWidth] = useState(0);
+  const breakpoint= 760;
+
+  useEffect(() => {
+    const handleResizeWindow = ()=> setWidth(window.innerWidth);
+
+    window.addEventListener("resize",  handleResizeWindow);
+    return () => {
+      window.removeEventListener("resize", handleResizeWindow);
+    }
+  }, []);
+
+  
+  
+  
+  
+  
+  
   return (
     <DrawerProvider>
       <header sx={styles.header} className={className} id="header">
         <Container sx={styles.container}>
           <Logo src={className === 'sticky' ? LogoDark : LogoWhite} />
 
-          <Flex as="nav" sx={styles.nav}>
+          {width > breakpoint &&(
+      <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, i) => (
               <Link
                 activeClass="active"
@@ -31,6 +53,8 @@ export default function Header({ className }) {
               </Link>
             ))}
           </Flex>
+    )
+  }
 
           {/* <Button
             className="donate__btn"
