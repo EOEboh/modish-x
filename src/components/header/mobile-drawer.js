@@ -98,7 +98,7 @@ const styles = {
     width: '26px',
     cursor: 'pointer',
     margin: '1rem',
-    '@media screen and (min-width: 1024px)': {
+    '@media screen and (min-width: 760px)': {
       display: 'none',
       
     },

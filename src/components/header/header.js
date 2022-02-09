@@ -14,6 +14,7 @@ export default function Header({ className }) {
   
   // for conditional screen rendering
   const [ width, setWidth] = useState(0);
+  // for the breakpoint in px
   const breakpoint= 760;
 
   useEffect(() => {
@@ -25,20 +26,14 @@ export default function Header({ className }) {
     }
   }, []);
 
-  
-  
-  
-  
-  
-  
   return (
     <DrawerProvider>
       <header sx={styles.header} className={className} id="header">
         <Container sx={styles.container}>
           <Logo src={className === 'sticky' ? LogoDark : LogoWhite} />
 
-          {width > breakpoint &&(
-      <Flex as="nav" sx={styles.nav}>
+          { width > breakpoint &&(
+          <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, i) => (
               <Link
                 activeClass="active"
@@ -127,10 +122,10 @@ const styles = {
   },
   nav: {
     mx: 'auto',
-    display: 'none',
-    '@media screen and (min-width: 1024px)': {
-      display: 'block',
-    },
+    // display: 'none',
+    // '@media screen and (min-width: 1024px)': {
+    //   display: 'block',
+    // },
     a: {
       fontSize: '16px',
       fontWeight: '400',

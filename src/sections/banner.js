@@ -8,9 +8,10 @@ import { FaPlayCircle } from 'react-icons/fa';
 import BannerBG from 'assets/bannerBg.png';
 import BannerThumb from 'assets/one.png';
 
-import client1 from 'assets/sponsor/paypal.svg';
-import client2 from 'assets/sponsor/google.svg';
-import client3 from 'assets/sponsor/dropbox.svg';
+
+import client1 from 'assets/modish-white.png';
+// import client2 from 'assets/sponsor/google.svg';
+// import client3 from 'assets/sponsor/dropbox.svg';
 
 const data = [
   {
@@ -19,18 +20,18 @@ const data = [
     image: client1,
     title: 'paypal',
   },
-  {
-    id: 2,
-    path: '#',
-    image: client2,
-    title: 'google',
-  },
-  {
-    id: 3,
-    path: '#',
-    image: client3,
-    title: 'dropbox',
-  },
+  // {
+  //   id: 2,
+  //   path: '#',
+  //   image: client2,
+  //   title: 'google',
+  // },
+  // {
+  //   id: 3,
+  //   path: '#',
+  //   image: client3,
+  //   title: 'dropbox',
+  // },
 ];
 
 export default function Banner() {
@@ -44,26 +45,25 @@ export default function Banner() {
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
-            Experience your ultimate mobile application
+            A Cutting-Edge Digital Fashion Merchandise
           </Heading>
           <Text as="p" variant="heroSecondary">
-            Get your blood tests delivered at let home collect sample from the
-            victory of the managements that supplies best design system
-            guidelines ever.
+            Explore, own and rock taste of the physical and virtual worlds
           </Text>
           <Flex style={{marginTop: '1rem'}}>
-            <Button variant="whiteButton" aria-label="Get Started">
+            <Button  aria-label="Get Started" 
+            style={{color: '#000000'}}>
               Get Started
             </Button>
             <>
               <ModalVideo
                 channel="youtube"
                 isOpen={videoOpen}
-                videoId="ZNA9rmDsYVE"
+                videoId="UBZ6Bd0LDjs"
                 onClose={() => setVideoOpen(false)}
               />
               <Button
-                variant="textButton"
+                style={{color: '#000'}}
                 aria-label="Watch Video"
                 onClick={handleClick}
               >
@@ -72,7 +72,7 @@ export default function Banner() {
             </>
           </Flex>
           <Flex sx={styles.sponsorBox}>
-            <Text sx={styles.sponsorTitle}>Sponsored by:</Text>
+            <Text sx={styles.sponsorTitle}>Brought to you by:</Text>
             <Box sx={styles.sponsorBox.sponsor}>
               {data.map((item, index) => (
                 <Link path={item.path} key={`client-key${index}`}>
@@ -115,7 +115,9 @@ const styles = {
       alignItems: 'center',
       flexShrink: 0,
       pt: [0, null, null, null, null, null, 5, 7],
-      margin: '1rem !important'
+      margin: '1rem !important',
+      padding: '1rem'
+      
     },
     imageBox: {
       display: ['none', null, null, 'block'],
@@ -129,6 +131,7 @@ const styles = {
       width: '100%',
     },
   },
+  
   sponsorTitle: {
     color: 'white',
     fontSize: [1, 2],

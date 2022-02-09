@@ -94,7 +94,7 @@ export default {
       pt: [2, null, null, 5],
       pb: [8, null, 9, null, null, 10],
     },
-    testimonial: {
+    services: {
       py: [8, null, 9, null, null, 10],
       overflow: 'hidden',
     },
@@ -253,7 +253,7 @@ export default {
     whiteButton: {
       variant: 'buttons.defaultBtn',
       color: 'heading_secondary',
-      bg: 'white',
+      bg: 'black',
       '&:hover': {
         boxShadow: 'rgba(0, 0, 0, 0.5) 0px 12px 24px -10px',
       },

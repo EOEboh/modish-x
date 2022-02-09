@@ -78,7 +78,7 @@ const responsive = {
 
 export default function TestimonialCard() {
   return (
-    <section id="testimonial" sx={{ variant: 'section.testimonial' }}>
+    <section id="services" sx={{ variant: 'section.testimonial' }}>
       <Container>
         <SectionHeader slogan="Testimonial" title="Meet Client Satisfaction" />
       </Container>
