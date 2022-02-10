@@ -1,7 +1,11 @@
 import React from 'react';
 
 
+
 class ChatwootWidget extends React.Component {
+
+
+
   componentDidMount () {
     // Add Chatwoot Settings
     window.chatwootSettings = {
@@ -9,6 +13,8 @@ class ChatwootWidget extends React.Component {
       position: 'right', // This can be left or right
       locale: 'en', // Language to be set
       type: 'expanded_bubble', // [standard, expanded_bubble]
+      launcherTitle: 'Chat with the team',
+      // showPopoutButton: true,
     };
 
     // Paste the script from inbox settings except the <script> tag
