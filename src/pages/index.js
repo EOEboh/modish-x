@@ -25,12 +25,12 @@ export default function IndexPage() {
         <Layout>
           <SEO title="Modish-X" />
           <Banner />
+          <TestimonialCard /> 
           <KeyFeature />
           <CoreFeature />
           <Feature />
           <PartnerSection />
           <WorkFlow />
-          <TestimonialCard />
           <SecurePayment />
           <Package />
           <Faq />

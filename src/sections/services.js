@@ -5,10 +5,11 @@ import Rating from 'components/rating';
 import ButtonGroup from 'components/button-group';
 import Carousel from 'react-multi-carousel';
 
-import Avatar1 from 'assets/testimonial/avatar1.png';
-import Avatar2 from 'assets/testimonial/avatar2.png';
-import Avatar3 from 'assets/testimonial/avatar3.png';
-import Avatar4 from 'assets/testimonial/avatar4.png';
+import Avatar1 from 'assets/testimonial/one.png';
+import Avatar2 from 'assets/testimonial/two.jpg';
+import Avatar3 from 'assets/testimonial/three.jpg';
+import Avatar4 from 'assets/testimonial/four.jpg';
+import Avatar5 from 'assets/testimonial/five.jpg';
 
 const data = [
   {
@@ -47,6 +48,16 @@ const data = [
     description:
       'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
     avatar: Avatar4,
+    name: 'Denny Hilguston',
+    designation: '@denny.hil',
+    review: 4,
+  },
+  {
+    id: 4,
+    title: 'Modern look & trending design',
+    description:
+      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
+    avatar: Avatar5,
     name: 'Denny Hilguston',
     designation: '@denny.hil',
     review: 4,
@@ -107,21 +118,22 @@ export default function TestimonialCard() {
         >
           {data.map((item) => (
             <Box sx={styles.reviewCard} key={`testimonial--key${item.id}`}>
+{/*               
               <Rating rating={item.review} />
               <Heading as="h3" sx={styles.title}>
                 {item.title}
               </Heading>
-              <Text sx={styles.description}>{item.description}</Text>
+              <Text sx={styles.description}>{item.description}</Text> */}
               <div className="card-footer">
                 <div className="image">
                   <Image src={item.avatar} alt="Client Image" />
                 </div>
-                <div className="reviewer-info">
+                {/* <div className="reviewer-info">
                   <Heading as="h4" sx={styles.heading}>
                     {item.name}
                   </Heading>
                   <Text sx={styles.designation}>{item.designation}</Text>
-                </div>
+                </div> */}
               </div>
             </Box>
           ))}
@@ -168,14 +180,14 @@ const styles = {
     boxShadow: '0px 0px 1px rgba(38, 78, 118, 0.35)',
     transition: 'all 0.3s',
     borderRadius: '6px',
-    p: [
-      '30px 20px 35px',
-      '30px 25px 35px',
-      '30px 20px 35px',
-      '35px 30px 40px 40px',
-      '30px 30px 35px',
-      '35px 30px 40px 40px',
-    ],
+    // p: [
+    //   '30px 20px 35px',
+    //   '30px 25px 35px',
+    //   '30px 20px 35px',
+    //   '35px 30px 40px 40px',
+    //   '30px 30px 35px',
+    //   '35px 30px 40px 40px',
+    // ],
     bg: 'white',
     textAlign: 'left',
     m: [
@@ -217,13 +229,13 @@ const styles = {
       marginTop: [5, null, null, '33px'],
       '.image': {
         flexShrink: 0,
-        mr: [3, null, null, 4],
+        // mr: [3, null, null, 4],
         display: 'flex',
         img: {
-          width: '55px',
-          height: '55px',
-          borderRadius: '50%',
-          objectFit: 'cover',
+          width: '100%',
+          // height: 'auto',
+          borderRadius: '5%',
+          // objectFit: 'cover',
         },
       },
     },

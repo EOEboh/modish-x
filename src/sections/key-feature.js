@@ -37,10 +37,10 @@ const data = [
 export default function KeyFeature() {
   return (
     <section sx={{ variant: 'section.keyFeature' }} id="feature">
-      <Container>
+      <Container sx={styles.title}>
         <SectionHeader
-          slogan="Quality features"
-          title="Meet exciting feature of app"
+          slogan="Features We Are Offering"
+          title="The Exciting Features of Modish-X"
         />
 
         <Grid sx={styles.grid}>
@@ -60,6 +60,9 @@ export default function KeyFeature() {
 }
 
 const styles = {
+  title:{
+    margin: '1rem !important'
+  },
   grid: {
     px: [0, null, null, '40px', null, '80px'],
     pt: [0, null, null, null, null, null, null, 3],

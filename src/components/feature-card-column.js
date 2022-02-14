@@ -25,6 +25,7 @@ const styles = {
     alignItems: 'flex-start',
     textAlign: 'center',
     flexDirection: 'column',
+    backgroundImage: `url()`
   },
   img: {
     mx: 'auto',
