@@ -8,6 +8,6 @@ You can read the white paper HERE.
 ## Features
 - Display of 3D Digital wearables
 - Live chat customer engagement feature
-- Responsive user interfaces using theme-ui
+- Responsive user interfaces using [theme-ui](https://theme-ui.com/)
 
 
