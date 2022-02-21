@@ -1,6 +1,12 @@
 /** @jsx jsx */
+import { useEffect } from 'react';
 import { jsx } from 'theme-ui';
 import { Container, Grid, Box, Heading, Text } from 'theme-ui';
+
+
+// Animate on scroll library
+import AOS from 'aos';
+
 import SectionHeader from 'components/section-header';
 
 import PatternBG from 'assets/patternBG.png';
@@ -35,8 +41,13 @@ const data = [
 ];
 
 export default function WorkFlow() {
+  useEffect(() => {
+    AOS.init({ duration: 2500});
+    AOS.refresh();
+  }, [])
+
   return (
-    <section sx={styles.workflow}>
+    <section sx={styles.workflow} data-aos="zoom-out">
       <Container>
         <SectionHeader
           slogan="Whats the function"

@@ -1,12 +1,17 @@
 /** @jsx jsx */
+import React, { useEffect } from 'react';
 import { jsx, Container, Box } from 'theme-ui';
 import TextFeature from 'components/text-feature';
 import Image from 'components/image';
 
 import Partner from 'assets/partner.png';
 
+
+// Animate on scroll library
+import AOS from 'aos';
+
 const data = {
-  subTitle: 'Core features',
+  subTitle: 'Partners',
   title: 'Smart Jackpots that you may love this anytime & anywhere',
   description:
     'Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever. Get your tests delivered at let home collect sample.',
@@ -15,8 +20,13 @@ const data = {
 };
 
 export default function PartnerSection() {
+
+  useEffect(() => {
+    AOS.init({ duration: 2500});
+    AOS.refresh();
+  }, [])
   return (
-    <section sx={{ variant: 'section.partner' }}>
+    <section sx={{ variant: 'section.partner' }} data-aos="zoom-in-down">
       <Container sx={styles.containerBox}>
         <Box sx={styles.contentBox}>
           <TextFeature

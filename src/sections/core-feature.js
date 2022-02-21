@@ -1,52 +1,63 @@
 /** @jsx jsx */
-import { jsx, Container, Box, Grid, Text, Heading } from 'theme-ui';
+import { useEffect } from 'react';
+import { jsx, Container, Box, Grid, Text, Heading, Image } from 'theme-ui';
 import TextFeature from 'components/text-feature';
-import Image from 'components/image';
+import AboutImg from 'assets/testimonial/test1.jpg';
+;
 
-import CoreFeatureThumb from 'assets/coreFeature.png';
-import Briefcase from 'assets/core-feature/briefcase.svg';
-import Secure from 'assets/core-feature/secure.svg';
+// Animate on scroll library
+import AOS from 'aos';
 
 const data = {
-  subTitle: 'Core features',
-  title: 'Smart Jackpots that you may love this anytime & anywhere',
+  subTitle: 'About Us',
+  title: 'We are a digital enterprise that aim to create an opportunity for fashion lovers and fashion brands to connect, socialize and experience digital as well as physical shopability',
   features: [
     {
       id: 1,
-      imgSrc: Briefcase,
+      // imgSrc: Briefcase,
       altText: 'Smart Features',
       title: 'Smart Features',
       text:
         'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+      
     },
     {
       id: 2,
-      imgSrc: Secure,
+      // imgSrc: Secure,
       altText: 'Secure Contents',
       title: 'Secure Contents',
       text:
         'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+        
     },
   ],
 };
 
 export default function CoreFeature() {
+
+  
+  useEffect(() => {
+    AOS.init({ duration: 2500});
+    AOS.refresh();
+  }, [])
   return (
-    <section sx={styles.coreFeature}>
+    <section sx={styles.coreFeature} data-aos='fade-left'>
       <Container sx={styles.containerBox}>
-        <Box sx={styles.thumbnail}>
+        {/* <Box sx={styles.thumbnail}>
           <Image src={CoreFeatureThumb} alt="Thumbnail" />
-        </Box>
+        </Box> */}
         <Box sx={styles.contentBox}>
           <Box sx={styles.headingTop}>
             <TextFeature subTitle={data.subTitle} title={data.title} />
           </Box>
+          {/* <Box sx={styles.thumbnail}>
+            <Image src={AboutImg} altText='About Us' />
+          </Box> */}
 
           <Grid gap="15px 0" columns={1} sx={styles.grid}>
             {data.features.map((item) => (
               <Box sx={styles.card} key={item.id}>
-                <Image src={item.imgSrc} alt={item.altText} sx={styles.img} />
-
+                
                 <Box sx={styles.wrapper}>
                   <Heading sx={styles.wrapper.title}>{item.title}</Heading>
                   <Text sx={styles.wrapper.subTitle}>{item.text}</Text>
@@ -70,7 +81,7 @@ const styles = {
       top: ['auto', null, null, '50%'],
       bottom: ['100px', 0, null, 'auto'],
       left: 0,
-      background: 'linear-gradient(-157deg, #F6FAFD, #F9FCFC, #FCFDFC)',
+      background: 'url("assets/testimonial/test1.jpg"),linear-gradient(-157deg, #F6FAFD, #F9FCFC) !important',
       height: [350, 550, '60%'],
       width: '50%',
       zIndex: -1,
@@ -83,13 +94,13 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    flexDirection: ['column', null, null, 'row'],
+    flexDirection: ['column', null, null, 'column'],
   },
-  thumbnail: {
-    pl: [0, 5, 0, null, 7, 95],
-    pr: [0, 5, null, null, null, 75, 95],
-    order: [2, null, null, 0],
-  },
+  // thumbnail: {
+  //   pl: [0, 5, 0, null, 7, 95],
+  //   pr: [0, 5, null, null, null, 75, 95],
+  //   order: [2, null, null, 0],
+  
   contentBox: {
     width: ['100%', 450, 550, 350, 500, 570],
     pr: [0, null, 'auto', null, null, 80],
@@ -97,9 +108,9 @@ const styles = {
     flexShrink: 0,
   },
   headingTop: {
-    pl: [0, null, null, null, '35px', null, '55px', 6],
+    // pl: [0, null, null, null, '35px', null, '55px', 6],
     mb: [3, null, null, null, 1],
-    textAlign: ['center', null, null, 'left'],
+    textAlign: 'center',
   },
   grid: {
     p: ['0 0px 35px', null, null, null, '0 20px 40px', null, '0 40px 40px', 0],

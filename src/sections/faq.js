@@ -1,7 +1,12 @@
 /** @jsx jsx */
+import { useEffect } from 'react';
 import { jsx, Container, Box } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 import Accordion from 'components/accordion/accordion';
+
+// Animate on scroll library
+import AOS from 'aos';
+
 const faqs = [
   {
     title: 'How to contact with riders emergency ?',
@@ -47,8 +52,14 @@ const faqs = [
   },
 ];
 export default function Faq() {
+  useEffect(() => {
+    AOS.init({ duration: 2500});
+    AOS.refresh();
+  }, [])
   return (
-    <section sx={{ variant: 'section.faq' }}>
+    <section sx={{ variant: 'section.faq' }} data-aos="fade-left"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine">
       <Container>
         <SectionHeader
           title="Frequently asked question"

@@ -1,15 +1,19 @@
 /** @jsx jsx */
+import { useEffect } from 'react';
 import { jsx, Container, Heading, Text, Box, Image } from 'theme-ui';
 import SectionHeader from 'components/section-header';
-import Rating from 'components/rating';
+
+// Animate on scroll library
+import AOS from 'aos';
+
 import ButtonGroup from 'components/button-group';
 import Carousel from 'react-multi-carousel';
 
-import Avatar1 from 'assets/testimonial/one.png';
-import Avatar2 from 'assets/testimonial/two.jpg';
-import Avatar3 from 'assets/testimonial/three.jpg';
-import Avatar4 from 'assets/testimonial/four.jpg';
-import Avatar5 from 'assets/testimonial/five.jpg';
+import Avatar1 from 'assets/testimonial/test1.jpg';
+import Avatar2 from 'assets/testimonial/test2.jpg';
+import Avatar3 from 'assets/testimonial/test3.jpg';
+import Avatar4 from 'assets/testimonial/test4.jpg';
+import Avatar5 from 'assets/testimonial/test5.jpg';
 
 const data = [
   {
@@ -18,9 +22,9 @@ const data = [
     description:
       'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
     avatar: Avatar1,
-    name: 'Denny Hilguston',
+    name: 'Gaming and the Metaverse',
     designation: '@denny.hil',
-    review: 4,
+    
   },
   {
     id: 2,
@@ -28,9 +32,9 @@ const data = [
     description:
       'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
     avatar: Avatar2,
-    name: 'Denny Hilguston',
+    name: 'Fashion and the Metaverse',
     designation: '@denny.hil',
-    review: 5,
+    
   },
   {
     id: 3,
@@ -38,9 +42,9 @@ const data = [
     description:
       'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
     avatar: Avatar3,
-    name: 'Denny Hilguston',
+    name: 'An experience of the physical and digital worlds',
     designation: '@denny.hil',
-    review: 5,
+    
   },
   {
     id: 4,
@@ -48,9 +52,9 @@ const data = [
     description:
       'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
     avatar: Avatar4,
-    name: 'Denny Hilguston',
+    name: 'A cutting-edge technology',
     designation: '@denny.hil',
-    review: 4,
+    
   },
   {
     id: 4,
@@ -58,9 +62,9 @@ const data = [
     description:
       'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
     avatar: Avatar5,
-    name: 'Denny Hilguston',
+    name: 'Made for you!',
     designation: '@denny.hil',
-    review: 4,
+    
   },
 ];
 
@@ -68,17 +72,17 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1619 },
     items: 4,
-    slidesToSlide: 4, // optional, default to 1.
+    slidesToSlide: 1, // optional, default to 1.
   },
   laptop: {
     breakpoint: { max: 1619, min: 1024 },
     items: 3,
-    slidesToSlide: 3, // optional, default to 1.
+    slidesToSlide: 1, // optional, default to 1.
   },
   tablet: {
     breakpoint: { max: 1024, min: 640 },
     items: 2,
-    slidesToSlide: 2, // optional, default to 1.
+    slidesToSlide: 1, // optional, default to 1.
   },
   mobile: {
     breakpoint: { max: 639, min: 0 },
@@ -88,10 +92,15 @@ const responsive = {
 };
 
 export default function TestimonialCard() {
+
+  useEffect(() => {
+    AOS.init({ duration: 2500});
+    AOS.refresh();
+  }, [])
   return (
-    <section id="services" sx={{ variant: 'section.testimonial' }}>
-      <Container>
-        <SectionHeader slogan="Testimonial" title="Meet Client Satisfaction" />
+    <section id="services" sx={{ variant: 'section.testimonial' }} data-aos="zoom-in">
+      <Container sx={ styles.container}>
+        <SectionHeader slogan="The Metaverse" title="Modish-X in the metaverse" />
       </Container>
       <Box sx={styles.carouselWrapper}>
         <Carousel
@@ -118,22 +127,17 @@ export default function TestimonialCard() {
         >
           {data.map((item) => (
             <Box sx={styles.reviewCard} key={`testimonial--key${item.id}`}>
-{/*               
-              <Rating rating={item.review} />
-              <Heading as="h3" sx={styles.title}>
-                {item.title}
-              </Heading>
-              <Text sx={styles.description}>{item.description}</Text> */}
-              <div className="card-footer">
+
+              <div className='carousel-wrapper'>
                 <div className="image">
                   <Image src={item.avatar} alt="Client Image" />
                 </div>
-                {/* <div className="reviewer-info">
+                 <div className="reviewer-info">
                   <Heading as="h4" sx={styles.heading}>
                     {item.name}
                   </Heading>
-                  <Text sx={styles.designation}>{item.designation}</Text>
-                </div> */}
+                  {/*<Text sx={styles.designation}>{item.designation}</Text> */}
+                </div> 
               </div>
             </Box>
           ))}
@@ -144,9 +148,14 @@ export default function TestimonialCard() {
 }
 
 const styles = {
+  container:{
+    mt: '35px',
+    mb: '35px',
+    textAlign: 'center'
+  },
   carouselWrapper: {
     display: 'flex',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-around',
     flexDirection: 'column',
     alignItems: 'flex-end',
     mt: '-35px',
@@ -176,18 +185,19 @@ const styles = {
       },
     },
   },
+  
   reviewCard: {
     boxShadow: '0px 0px 1px rgba(38, 78, 118, 0.35)',
     transition: 'all 0.3s',
     borderRadius: '6px',
-    // p: [
-    //   '30px 20px 35px',
-    //   '30px 25px 35px',
-    //   '30px 20px 35px',
-    //   '35px 30px 40px 40px',
-    //   '30px 30px 35px',
-    //   '35px 30px 40px 40px',
-    // ],
+    p: [
+      '30px 20px 35px',
+      '30px 25px 35px',
+      '30px 20px 35px',
+      '35px 30px 40px 40px',
+      '30px 30px 35px',
+      '35px 30px 40px 40px',
+    ],
     bg: 'white',
     textAlign: 'left',
     m: [
@@ -200,45 +210,8 @@ const styles = {
     '&:hover': {
       boxShadow: '0px 6px 47px rgba(38, 78, 118, 0.1)',
     },
-    '.rating': {
-      mb: [1, null, null, 2],
-      ul: {
-        pl: 0,
-        listStyle: 'none',
-        mb: 0,
-        display: 'flex',
-      },
-      svg: {
-        marginRight: '2px',
-        '&:last-of-type': {
-          marginRight: 0,
-        },
-      },
-      '.star': {
-        color: 'yellow',
-        mr: '1px',
-      },
-      '.star-o': {
-        color: '#ddd',
-        mr: '1px',
-      },
-    },
-    '.card-footer': {
-      display: 'flex',
-      alignItems: 'center',
-      marginTop: [5, null, null, '33px'],
-      '.image': {
-        flexShrink: 0,
-        // mr: [3, null, null, 4],
-        display: 'flex',
-        img: {
-          width: '100%',
-          // height: 'auto',
-          borderRadius: '5%',
-          // objectFit: 'cover',
-        },
-      },
-    },
+    
+    
   },
   title: {
     fontSize: [1, 2],
@@ -247,23 +220,25 @@ const styles = {
     color: 'text',
     lineHeight: 1.6,
   },
-  description: {
-    fontSize: [1, null, null, 2],
-    fontWeight: 'normal',
-    color: 'text',
-    lineHeight: [1.85, null, 2],
-  },
+  // description: {
+  //   fontSize: [1, null, null, 2],
+  //   fontWeight: 'normal',
+  //   color: 'text',
+  //   lineHeight: [1.85, null, 2],
+  // },
   heading: {
     fontSize: [1, null, null, 2],
     fontWeight: 700,
+    fontFamily: 'Open Sans',
     mb: '3px',
     color: 'text',
     lineHeight: 1.3,
+    textAlign: 'center'
   },
-  designation: {
-    color: '#25A0FF',
-    fontWeight: '500',
-    fontSize: 1,
-    lineHeight: 1.4,
-  },
+  // designation: {
+  //   color: '#25A0FF',
+  //   fontWeight: '500',
+  //   fontSize: 1,
+  //   lineHeight: 1.4,
+  // },
 };

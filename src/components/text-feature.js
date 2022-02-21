@@ -56,8 +56,9 @@ const styles = {
       color: 'heading_secondary',
       lineHeight: [1.35, null, null, 1.3, 1.2],
       fontWeight: '700',
-      letterSpacing: '-.5px',
+      letterSpacing: '2px',
       mb: 5,
+      
     },
 
     subTitle: {
