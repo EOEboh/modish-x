@@ -57,7 +57,7 @@ export default {
   // variants can use custom, user-defined names
   layout: {
     container: {
-      maxWidth: [
+      width: [
         '100%',
         null,
         null,
@@ -339,6 +339,7 @@ export default {
 
   styles: {
     // To add base, top-level styles to the <body> element, use theme.styles.root.
+    
     root: {
       fontFamily: 'body',
       lineHeight: 'body',

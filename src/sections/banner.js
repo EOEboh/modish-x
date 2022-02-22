@@ -115,7 +115,6 @@ const styles = {
       alignItems: 'center',
       flexShrink: 0,
       pt: [0, null, null, null, null, null, 5, 7],
-      margin: '1rem !important',
       padding: '1rem'
       
     },
