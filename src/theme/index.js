@@ -74,7 +74,7 @@ export default {
       fontWeight: 'normal',
       py: 3,
       position: 'absolute',
-      width: '100%',
+      // width: '100%',
     },
     toolbar: {
       display: 'flex',
@@ -105,6 +105,7 @@ export default {
     },
     faq: {
       py: [8, null, 9, null, null, 10],
+      p: '1rem !important'
     },
   },
   sectionHeader: {

@@ -3,6 +3,7 @@
 // import { initGA, logPageView } from 'analytics';
 // Load DM Sans typeface
 
+
 import Head from 'next/head'
 
 import 'typeface-dm-sans';
@@ -26,7 +27,7 @@ export default function CustomApp({ Component, pageProps }) {
   return (
     <>
    <Head>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
    </Head>
    <Component {...pageProps} />;
    </>

@@ -28,9 +28,11 @@ const styles = {
     backgroundImage: `url()`
   },
   img: {
+    mt: [3, null, 4, null, null, 5],
     mx: 'auto',
     mb: [3, null, 4, null, null, 5],
     width: ['80px', '90px', null, null, null, '100px', 'auto'],
+    
   },
   wrapper: {
     width: '100%',

@@ -1,244 +1,186 @@
 /** @jsx jsx */
 import { useEffect } from 'react';
-import { jsx, Container, Heading, Text, Box, Image } from 'theme-ui';
-import SectionHeader from 'components/section-header';
+import { jsx } from 'theme-ui';
+import { Container, Grid, Box, Heading, Text } from 'theme-ui';
+
 
 // Animate on scroll library
 import AOS from 'aos';
 
-import ButtonGroup from 'components/button-group';
-import Carousel from 'react-multi-carousel';
+import SectionHeader from 'components/section-header';
 
-import Avatar1 from 'assets/testimonial/test1.jpg';
-import Avatar2 from 'assets/testimonial/test2.jpg';
-import Avatar3 from 'assets/testimonial/test3.jpg';
-import Avatar4 from 'assets/testimonial/test4.jpg';
-import Avatar5 from 'assets/testimonial/test5.jpg';
+// import PatternBG from 'assets/patternBG.png';
+import PatternBG from 'assets/modish-white.png';
+import ArrowOdd from 'assets/arrowOdd.png';
+import ArrowEven from 'assets/arrowEven.png';
 
 const data = [
   {
     id: 1,
-    title: 'Modern look & trending design',
-    description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar1,
-    name: 'Gaming and the Metaverse',
-    designation: '@denny.hil',
-    
+    title: 'Sales of Digital & Physical Wearables',
+    text:
+      'We are offering you digital wearables as well as physical wearables at the same time ',
   },
+  
   {
     id: 2,
-    title: 'Design Quality & performance',
-    description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar2,
-    name: 'Fashion and the Metaverse',
-    designation: '@denny.hil',
-    
+    title: 'Sale of NFTs as wearables',
+    text:
+      'The wearables are sold in form of an NFT and you also get the physical wearable shipped to you. When you buy our products, you possess exclusive rights to its NFT and wearable as long as you own them ',
   },
   {
     id: 3,
-    title: 'Layout and organized layers',
-    description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar3,
-    name: 'An experience of the physical and digital worlds',
-    designation: '@denny.hil',
-    
-  },
-  {
-    id: 4,
-    title: 'Modern look & trending design',
-    description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar4,
-    name: 'A cutting-edge technology',
-    designation: '@denny.hil',
-    
-  },
-  {
-    id: 4,
-    title: 'Modern look & trending design',
-    description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar5,
-    name: 'Made for you!',
-    designation: '@denny.hil',
-    
+    title: 'Leasing',
+    text:
+      'You also have a chance to own any of our product for a specified amount of time',
   },
 ];
 
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1619 },
-    items: 4,
-    slidesToSlide: 1, // optional, default to 1.
-  },
-  laptop: {
-    breakpoint: { max: 1619, min: 1024 },
-    items: 3,
-    slidesToSlide: 1, // optional, default to 1.
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 640 },
-    items: 2,
-    slidesToSlide: 1, // optional, default to 1.
-  },
-  mobile: {
-    breakpoint: { max: 639, min: 0 },
-    items: 1,
-    slidesToSlide: 1, // optional, default to 1.
-  },
-};
-
-export default function TestimonialCard() {
-
+export default function Services() {
   useEffect(() => {
     AOS.init({ duration: 2500});
     AOS.refresh();
   }, [])
-  return (
-    <section id="services" sx={{ variant: 'section.testimonial' }} data-aos="zoom-in">
-      <Container sx={ styles.container}>
-        <SectionHeader slogan="The Metaverse" title="Modish-X in the metaverse" />
-      </Container>
-      <Box sx={styles.carouselWrapper}>
-        <Carousel
-          additionalTransfrom={0}
-          arrows={false}
-          autoPlaySpeed={3000}
-          centerMode={false}
-          className=""
-          containerClass="carousel-container"
-          customButtonGroup={<ButtonGroup />}
-          dotListClass=""
-          draggable
-          focusOnSelect={false}
-          infinite={true}
-          itemClass=""
-          keyBoardControl
-          minimumTouchDrag={80}
-          renderButtonGroupOutside
-          renderDotsOutside={false}
-          responsive={responsive}
-          showDots={false}
-          sliderClass=""
-          slidesToSlide={1}
-        >
-          {data.map((item) => (
-            <Box sx={styles.reviewCard} key={`testimonial--key${item.id}`}>
 
-              <div className='carousel-wrapper'>
-                <div className="image">
-                  <Image src={item.avatar} alt="Client Image" />
-                </div>
-                 <div className="reviewer-info">
-                  <Heading as="h4" sx={styles.heading}>
-                    {item.name}
-                  </Heading>
-                  {/*<Text sx={styles.designation}>{item.designation}</Text> */}
-                </div> 
-              </div>
+  return (
+    <section sx={styles.workflow} id="services" data-aos="zoom-out">
+      <Container>
+        <SectionHeader
+          slogan="SERVICES"
+          title="What We Offer"
+          isWhite={true}  
+        />
+
+        <Grid sx={styles.grid}>
+          {data.map((item) => (
+            <Box sx={styles.card} key={item.id}>
+              <Box sx={styles.iconBox}>{`0${item.id}`}</Box>
+              <Box sx={styles.wrapper}>
+                <Heading sx={styles.wrapper.title}>{item.title}</Heading>
+                <Text sx={styles.wrapper.subTitle}>{item.text}</Text>
+              </Box>
             </Box>
           ))}
-        </Carousel>
-      </Box>
+        </Grid>
+      </Container>
     </section>
   );
 }
 
 const styles = {
-  container:{
-    mt: '35px',
-    mb: '35px',
-    textAlign: 'center'
-  },
-  carouselWrapper: {
-    display: 'flex',
-    justifyContent: 'space-around',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
-    mt: '-35px',
-    px: '15px',
-    '.carousel-container': {
+  workflow: {
+    padding: '1rem',
+    marginTop: '1rem',
+    backgroundColor: 'transparent',
+    backgroundImage: `url(${PatternBG})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPosition: 'center center',
+    backgroundSize: 'cover',
+    position: 'relative',
+    py: [8, null, 9, null, null, 10],
+    '&::before': {
+      position: 'absolute',
+      content: '""',
+      top: 0,
+      right: 0,
+      background:
+        'linear-gradient(-45deg, rgba(42,72,125, 0.3) 25%, transparent 25%, transparent 50%, rgba(157,52,147, 0.3) 50%, rgba(221,176,19, 0.3) 75%, transparent 75%, transparent)',
       width: '100%',
-      maxWidth: [
-        '100%',
-        null,
-        null,
-        '750px',
-        '1000px',
-        '1180px',
-        null,
-        'calc(50% + 865px)',
-      ],
-      mr: ['auto', null, null, null, null, null, null, '-220px'],
-      ml: 'auto',
-      '.react-multi-carousel-item': {
-        transition: 'all 0.25s',
-      },
-      '.react-multi-carousel-item--active:nth-of-type(4n)': {
-        opacity: '0.5',
-        '@media screen and (max-width: 1620px)': {
-          opacity: 1,
-        },
-      },
+      backgroundSize: '350px 350px',
+      height: '100%',
+      opacity: 0.3,
+      zIndex: 0,
     },
   },
-  
-  reviewCard: {
-    boxShadow: '0px 0px 1px rgba(38, 78, 118, 0.35)',
-    transition: 'all 0.3s',
-    borderRadius: '6px',
-    p: [
-      '30px 20px 35px',
-      '30px 25px 35px',
-      '30px 20px 35px',
-      '35px 30px 40px 40px',
-      '30px 30px 35px',
-      '35px 30px 40px 40px',
+  grid: {
+    mb: -1,
+    pt: 0,
+    gridGap: [
+      '35px 0',
+      null,
+      '45px 50px',
+      null,
+      '50px 25px',
+      null,
+      null,
+      '50px 65px',
     ],
-    bg: 'white',
-    textAlign: 'left',
-    m: [
-      '28px 5px 30px 5px',
-      '28px 20px 30px 20px',
-      '28px 15px 30px 15px',
-      '28px 15px 30px 15px',
-      '30px 20px 40px',
+    gridTemplateColumns: [
+      'repeat(1,1fr)',
+      null,
+      'repeat(2,1fr)',
+      null,
+      'repeat(4,1fr)',
     ],
-    '&:hover': {
-      boxShadow: '0px 6px 47px rgba(38, 78, 118, 0.1)',
+  },
+  card: {
+    display: 'flex',
+    flexDirection: 'column',
+    position: 'relative',
+    textAlign: ['center', null, 'left'],
+    width: ['100%', '80%', '100%'],
+    mx: 'auto',
+    '&::before': {
+      position: 'absolute',
+      content: '""',
+      top: 0,
+      left: [0, null, null, null, null, 75, null, 100],
+      backgroundRepeat: `no-repeat`,
+      backgroundPosition: 'center center',
+      width: 215,
+      height: 60,
+      opacity: 0.3,
+      '@media screen and (max-width:1220px)': {
+        display: 'none',
+      },
     },
-    
-    
+    '&:nth-of-type(2n-1)::before': {
+      backgroundImage: `url(${ArrowOdd})`,
+    },
+    '&:nth-of-type(2n)::before': {
+      backgroundImage: `url(${ArrowEven})`,
+      top: 17,
+    },
+    '&:last-child::before': {
+      display: 'none',
+    },
   },
-  title: {
-    fontSize: [1, 2],
+
+  iconBox: {
+    width: ['50px', null, '60px', null, null, '70px'],
+    height: ['50px', null, '60px', null, null, '70px'],
+    flexShrink: 0,
+    borderRadius: [15, null, 23, null, null, 30],
+    backgroundColor: 'white',
+    display: 'flex',
+    alignItems: 'center',
+    mb: [5, null, null, null, null, 6],
+    mx: ['auto', null, 0],
+    fontSize: [6, null, 7, null, null, '30px'],
     fontWeight: 700,
-    mb: [3, null, null, '22px'],
-    color: 'text',
-    lineHeight: 1.6,
+    justifyContent: 'center',
+    color: '#9d3493',
   },
-  // description: {
-  //   fontSize: [1, null, null, 2],
-  //   fontWeight: 'normal',
-  //   color: 'text',
-  //   lineHeight: [1.85, null, 2],
-  // },
-  heading: {
-    fontSize: [1, null, null, 2],
-    fontWeight: 700,
-    fontFamily: 'Open Sans',
-    mb: '3px',
-    color: 'text',
-    lineHeight: 1.3,
-    textAlign: 'center'
+  wrapper: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    mt: '-5px',
+    title: {
+      fontSize: [3, null, 4, null, null, 5],
+      color: 'secondary',
+      lineHeight: [1.4, null, null, null, null, 1.55],
+      pr: [0, null, null, null, null, 2],
+      mb: [2, 3],
+    },
+
+    subTitle: {
+      fontSize: 1,
+      fontWeight: 400,
+      lineHeight: [1.85, null, null, 1.9, 2],
+      color: 'text',
+      opacity: 0.65,
+      pr: [0, null, null, null, null, 5],
+    },
   },
-  // designation: {
-  //   color: '#25A0FF',
-  //   fontWeight: '500',
-  //   fontSize: 1,
-  //   lineHeight: 1.4,
-  // },
 };

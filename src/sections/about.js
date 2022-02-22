@@ -14,26 +14,26 @@ const data = {
   features: [
     {
       id: 1,
-      // imgSrc: Briefcase,
-      altText: 'Smart Features',
-      title: 'Smart Features',
-      text:
-        'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+      imgSrc: AboutImg,
+      // altText: 'Smart Features',
+      // title: 'Smart Features',
+      // text:
+      //   'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
       
     },
     {
       id: 2,
-      // imgSrc: Secure,
-      altText: 'Secure Contents',
-      title: 'Secure Contents',
-      text:
-        'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+      imgSrc: AboutImg,
+      // altText: 'Secure Contents',
+      // title: 'Secure Contents',
+      // text:
+      //   'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
         
     },
   ],
 };
 
-export default function CoreFeature() {
+export default function About() {
 
   
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function CoreFeature() {
     AOS.refresh();
   }, [])
   return (
-    <section sx={styles.coreFeature} data-aos='fade-left'>
+    <section sx={styles.about} data-aos='fade-left'>
       <Container sx={styles.containerBox}>
         {/* <Box sx={styles.thumbnail}>
           <Image src={CoreFeatureThumb} alt="Thumbnail" />
@@ -50,9 +50,10 @@ export default function CoreFeature() {
           <Box sx={styles.headingTop}>
             <TextFeature subTitle={data.subTitle} title={data.title} />
           </Box>
-          {/* <Box sx={styles.thumbnail}>
+
+          <Box sx={styles.thumbnail}>
             <Image src={AboutImg} altText='About Us' />
-          </Box> */}
+          </Box>
 
           <Grid gap="15px 0" columns={1} sx={styles.grid}>
             {data.features.map((item) => (
@@ -72,7 +73,8 @@ export default function CoreFeature() {
 }
 
 const styles = {
-  coreFeature: {
+  about: {
+    p: '1rem !important',
     py: [0, null, null, 2, null, 7],
     position: 'relative',
     '&::before': {
@@ -81,7 +83,7 @@ const styles = {
       top: ['auto', null, null, '50%'],
       bottom: ['100px', 0, null, 'auto'],
       left: 0,
-      background: 'url("assets/testimonial/test1.jpg"),linear-gradient(-157deg, #F6FAFD, #F9FCFC) !important',
+      background: 'linear-gradient(-157deg, #F6FAFD, #F9FCFC) !important',
       height: [350, 550, '60%'],
       width: '50%',
       zIndex: -1,
@@ -96,11 +98,11 @@ const styles = {
     justifyContent: 'space-between',
     flexDirection: ['column', null, null, 'column'],
   },
-  // thumbnail: {
-  //   pl: [0, 5, 0, null, 7, 95],
-  //   pr: [0, 5, null, null, null, 75, 95],
-  //   order: [2, null, null, 0],
-  
+  thumbnail: {
+    pl: [0, 5, 0, null, 7, 95],
+    pr: [0, 5, null, null, null, 75, 95],
+    order: [2, null, null, 0],
+  },
   contentBox: {
     width: ['100%', 450, 550, 350, 500, 570],
     pr: [0, null, 'auto', null, null, 80],
@@ -108,7 +110,8 @@ const styles = {
     flexShrink: 0,
   },
   headingTop: {
-    // pl: [0, null, null, null, '35px', null, '55px', 6],
+    mt: '1rem',
+    pl: [0, null, null, null, '35px', null, '55px', 6],
     mb: [3, null, null, null, 1],
     textAlign: 'center',
   },

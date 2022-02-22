@@ -6,11 +6,12 @@ import SEO from 'components/seo';
 import Layout from 'components/layout';
 import Banner from 'sections/banner';
 import KeyFeature from 'sections/key-feature';
-import CoreFeature from 'sections/core-feature';
+import About from 'sections/about';
 import Feature from 'sections/feature';
 import PartnerSection from 'sections/partner';
-import WorkFlow from 'sections/workflow';
-import TestimonialCard from 'sections/services';
+
+import Services from 'sections/services';
+import TestimonialCard from 'sections/testimonial';
 import SecurePayment from 'sections/secure-payment';
 import Package from 'sections/package';
 import Faq from 'sections/faq';
@@ -26,13 +27,13 @@ export default function IndexPage() {
           <SEO title="Modish-X" />
           <Banner />
           <KeyFeature />
-          <CoreFeature />
           <TestimonialCard /> 
           {/* <Feature /> */}
-          <PartnerSection />
-          <WorkFlow />
+          {/* <PartnerSection /> */}
+          <Services />
+          <About />
           <SecurePayment />
-          <Package />
+          {/* <Package /> */}
           <Faq />
         <ChatwootWidget />
         </Layout>

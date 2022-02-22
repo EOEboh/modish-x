@@ -4,53 +4,52 @@ import { jsx } from 'theme-ui';
 import { Container, Grid } from 'theme-ui';
 import SectionHeader from '../components/section-header';
 import FeatureCardColumn from 'components/feature-card-column.js';
-import Vector from 'assets/key-feature/vector.svg';
-import Editing from 'assets/key-feature/editing.svg';
-import Speed from 'assets/key-feature/speed.svg';
+import Vector from 'assets/testimonial/test2.jpg';
+import One from 'assets/testimonial/one.png';
+import Two from 'assets/testimonial/test6.png';
+import Three from 'assets/testimonial/test7.jpg';
 
 // Animate on scroll library
 import AOS from 'aos';
 
+const paragraph = {
+     text:
+      'Our promising model comes from having explored the Metaverse; We intend to leverage the possibility of using the Metaverse to strengthen the relationship between the fashion houses/designers and their consumers' 
+}
+
 const data = [
+  
   {
     id: 1,
-    imgSrc: Vector,
-    altText: 'Vector',
-    title: 'Digital Wearables',
-    text:
-      'Digital fashion wearables as well its physical wearable with equal value',
-  },
-  {
-    id: 2,
-    imgSrc: Editing,
-    altText: 'Monitoring',
+    imgSrc: Two,
+    altText: 'NFT',
     title: 'Initial NFT Offering',
     text:
       'Get an NFT of the digital wearable, serving as digital assets with utility functions',
   },
   {
+    id: 2,
+    imgSrc: Vector,
+    altText: 'Vector',
+    title: 'Digital Wearables',
+    text:
+      'Get your digital fashion wearables as well as its physical version with equal value',
+  },
+  {
     id: 3,
-    imgSrc: Speed,
-    altText: 'Quality',
+    imgSrc: Three,
+    altText: 'Ownership',
     title: 'Digital Ownership Rights',
     text:
-      'You possess exclusive rights to any NFT and wearable you buy as long as you own them',
+      'When you buy our products, you possess exclusive rights to its NFT and wearable as long as you own them ',
   },
   {
-    id: 3,
-    imgSrc: Speed,
-    altText: 'Quality',
+    id: 4,
+    imgSrc: One,
+    altText: 'Fashion Advert',
     title: 'Fashion Advertisement',
     text:
-      'A platform to expose your brand to the world, with expected returns',
-  },
-  {
-    id: 3,
-    imgSrc: Speed,
-    altText: 'Quality',
-    title: 'Leasing',
-    text:
-      'Own NFTs and wearables for a specified period of time with as much rights as buying it',
+      'We are the perfect platform that gives you an opportunity to expose your brand to the world',
   },
 ];
 
@@ -67,9 +66,12 @@ export default function KeyFeature() {
       
       <Container sx={styles.container}>
         <SectionHeader
-          slogan="Products We Are Offering"
+          slogan="WHY YOU SHOULD INVEST WITH US"
           title="The Exciting Features of Modish-X"
         />
+        <p>
+        {paragraph.text}
+        </p>
 
         <Grid sx={styles.grid}>
           {data.map((item) => (
@@ -90,9 +92,10 @@ export default function KeyFeature() {
 
 const styles = {
   container:{
-    // mt: '35px',
+    mt: '35px',
     mb: '35px',
-    textAlign: 'center'
+    textAlign: 'center',
+    padding: '1rem'
   },
   grid: {
     px: [0, null, null, '40px', null, '80px'],

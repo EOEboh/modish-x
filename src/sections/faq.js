@@ -57,13 +57,12 @@ export default function Faq() {
     AOS.refresh();
   }, [])
   return (
-    <section sx={{ variant: 'section.faq' }} data-aos="fade-left"
+    <section id="faq" sx={{ variant: 'section.faq' }} data-aos="fade-left"
     data-aos-offset="300"
     data-aos-easing="ease-in-sine">
       <Container>
         <SectionHeader
-          title="Frequently asked question"
-          slogan="Get your question answer"
+          title=" Our Frequently asked question"
         />
         <Box
           sx={{
