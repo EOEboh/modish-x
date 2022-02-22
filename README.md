@@ -11,4 +11,4 @@ You can read the white paper HERE.
 - Responsive user interfaces using [theme-ui](https://theme-ui.com/)
 
 ## Deployment
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8b5ef84b-c129-4beb-a974-d1aab051d1af/deploy-status)](https://app.netlify.com/sites/suspicious-lovelace-8cd958/deploys)
