@@ -9,29 +9,36 @@ import BannerBG from 'assets/item6.jpg';
 import BannerThumb from 'assets/one.png';
 
 
-import client1 from 'assets/modish-white.png';
-// import client2 from 'assets/sponsor/google.svg';
-// import client3 from 'assets/sponsor/dropbox.svg';
+import client1 from 'assets/6.png';
+import client2 from 'assets/2.png';
+import client3 from 'assets/3.png';
+import client4 from 'assets/5.png';
 
 const data = [
   {
     id: 1,
     path: '#',
     image: client1,
-    title: 'paypal',
+    title: 'shop',
   },
-  // {
-  //   id: 2,
-  //   path: '#',
-  //   image: client2,
-  //   title: 'google',
-  // },
-  // {
-  //   id: 3,
-  //   path: '#',
-  //   image: client3,
-  //   title: 'dropbox',
-  // },
+  {
+    id: 2,
+    path: '#',
+    image: client2,
+    title: 'fast',
+  },
+  {
+    id: 3,
+    path: '#',
+    image: client3,
+    title: 'secure',
+  },
+  {
+    id: 4,
+    path: '#',
+    image: client4,
+    title: 'rated',
+  },
 ];
 
 export default function Banner() {
@@ -48,11 +55,11 @@ export default function Banner() {
             A Cutting-Edge Digital Fashion Merchandise
           </Heading>
           <Text as="p" variant="heroSecondary">
-            Explore, own and rock taste of the physical and virtual worlds
+            A taste of the physical and virtual worlds of fashion
           </Text>
           <Flex style={{marginTop: '1rem'}}>
             <Button  aria-label="Get Started" 
-            style={{color: '#000000'}}>
+            style={{color: '#000000', backgroundColor: '#9d3493', cursor: 'pointer'}}>
               Get Started
             </Button>
             <>
@@ -63,7 +70,7 @@ export default function Banner() {
                 onClose={() => setVideoOpen(false)}
               />
               <Button
-                style={{color: '#000'}}
+                style={{color: '#000', cursor: 'pointer'}}
                 aria-label="Watch Video"
                 onClick={handleClick}
               >
@@ -72,11 +79,12 @@ export default function Banner() {
             </>
           </Flex>
           <Flex sx={styles.sponsorBox}>
-            <Text sx={styles.sponsorTitle}>Brought to you by:</Text>
+            <Text sx={styles.sponsorTitle}>Experience A New Way of Digital Shopability:</Text>
             <Box sx={styles.sponsorBox.sponsor}>
               {data.map((item, index) => (
                 <Link path={item.path} key={`client-key${index}`}>
                   <Image src={item.image} alt={item.title} />
+                  
                 </Link>
               ))}
             </Box>
@@ -107,7 +115,7 @@ const styles = {
     container: {
       display: 'flex',
       mt: '1rem',
-      color: 'primary'
+      color: 'background'
     },
     contentBox: {
       width: ['100%', null, '85%', '55%', '50%', '55%'],

@@ -10,7 +10,7 @@ import AOS from 'aos';
 import SectionHeader from 'components/section-header';
 
 // import PatternBG from 'assets/patternBG.png';
-import PatternBG from 'assets/modish-white.png';
+// import PatternBG from 'assets/modish-white.png';
 import ArrowOdd from 'assets/arrowOdd.png';
 import ArrowEven from 'assets/arrowEven.png';
 
@@ -72,7 +72,7 @@ const styles = {
     padding: '1rem',
     marginTop: '1rem',
     backgroundColor: 'transparent',
-    backgroundImage: `url(${PatternBG})`,
+    // backgroundImage: `url(${PatternBG})`,
     backgroundRepeat: `no-repeat`,
     backgroundPosition: 'center center',
     backgroundSize: 'cover',

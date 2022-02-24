@@ -133,7 +133,7 @@ const styles = {
       cursor: 'pointer',
       lineHeight: '1.2',
       '&.active': {
-        color: 'secondary',
+        color: 'text',
       },
     },
   },
