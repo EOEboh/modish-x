@@ -21,9 +21,9 @@ export default function SecurePayment() {
     <section sx={{ variant: 'section.securePayment' }}>
       <Box sx={styles.bgOverlay} />
       <Container sx={styles.containerBox}>
-        <Box sx={styles.thumbnail}>
+        {/* <Box sx={styles.thumbnail}>
           <Image src={PaymentThumb} alt={data.title} />
-        </Box>
+        </Box> */}
         <Box sx={styles.contentBox}>
           <TextFeature
             subTitle={data.subTitle}

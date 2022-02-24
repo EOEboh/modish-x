@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { jsx, Container, Box, Grid, Text, Heading, Image } from 'theme-ui';
 import TextFeature from 'components/text-feature';
-import AboutImg from 'assets/testimonial/test1.jpg';
+import AboutImg from 'assets/tunmise.jpg';
 ;
 
 // Animate on scroll library
@@ -17,17 +17,17 @@ const data = {
       imgSrc: AboutImg,
       // altText: 'Smart Features',
       // title: 'Smart Features',
-      // text:
-      //   'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+      text:
+        'In Modish-X, we are a team of young, blockchain and metaverse experts and ethusiasts, we aim to use our platform in creating enormous fashion opportunities available in both digital and physical worlds.',
       
     },
     {
       id: 2,
-      imgSrc: AboutImg,
+      // imgSrc: AboutImg,
       // altText: 'Secure Contents',
       // title: 'Secure Contents',
-      // text:
-      //   'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+      text:
+        'We possess amazing portfolios in our respective fields, a team of Developers, Blockchain experts, 3D animators, digital marketers, social media managers and project managers.',
         
     },
   ],
@@ -55,7 +55,7 @@ export default function About() {
             <Image src={AboutImg} altText='About Us' />
           </Box>
 
-          <Grid gap="15px 0" columns={1} sx={styles.grid}>
+          <Grid gap="15px 0" columns={2} gap='2px' sx={styles.grid}>
             {data.features.map((item) => (
               <Box sx={styles.card} key={item.id}>
                 
@@ -116,7 +116,7 @@ const styles = {
     textAlign: 'center',
   },
   grid: {
-    p: ['0 0px 35px', null, null, null, '0 20px 40px', null, '0 40px 40px', 0],
+    p: ['10px 0px 35px', '10px 0px 35px', '0 20px 40px', null, '0 40px 40px', 0],
   },
   card: {
     display: 'flex',
@@ -131,7 +131,8 @@ const styles = {
       null,
       '25px 30px 23px',
     ],
-    backgroundColor: 'white',
+    backgroundColor: 'primary',
+    color: 'background',
     borderRadius: '10px',
     transition: 'all 0.3s',
     width: ['100%', '85%', null, '100%'],

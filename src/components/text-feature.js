@@ -56,7 +56,7 @@ const styles = {
       color: 'heading_secondary',
       lineHeight: [1.35, null, null, 1.3, 1.2],
       fontWeight: '700',
-      letterSpacing: '2px',
+      // letterSpacing: '1px',
       mb: 5,
       
     },

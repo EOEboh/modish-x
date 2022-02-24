@@ -9,44 +9,34 @@ import AOS from 'aos';
 
 const faqs = [
   {
-    title: 'How to contact with riders emergency ?',
+    title: 'How will these wearables be sold ?',
     contents: (
       <div>
-        Get your website ads tests delivered at let collect sample from the
-        victory of the managements that supplies best design system which
-        guidelines ever with multiple features.
+        Me i no even know oooo, make Tunmise and Sam and co come tell us. Me sef dey reason how to buy sef, so i go escape poverty this year
       </div>
     ),
   },
   {
-    title: 'App installation failed, how to update system information?',
+    title: 'Are there fine boys in the team?',
     contents: (
       <div>
-        Rhino skin maybe thick but it can be quite sensitive to sunburns and
-        insect bites which is why they like wallow so much – when the mud dries
-        it acts as protection from the sunburns and insects.
+        Yes baby, na me fine pass, no cap. I con get six packs join, hey God!!!!!! Hide your girls
       </div>
     ),
   },
   {
-    title: `Website response taking time, how to improve?`,
+    title: `Lorem ipsum dolor sit amet, consectetur adipiscing elit?`,
     contents: (
       <div>
-        Get your blood tests delivered at the home collect a sample from
-        management news. Get your blood tests delivered at the home collect a
-        sample from management news. Get your blood tests delivered at the home
-        collect a sample from management news. Get your blood tests delivered at
-        the home.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </div>
     ),
   },
   {
-    title: `New update fixed all bug and issues`,
+    title: `culpa qui officia deserunt mollit anim id est laborum.`,
     contents: (
       <div>
-        If you’re looking to hunt a unicorn, but don’t know where to begin, try
-        Lake Superior State University in Sault Ste. Marie, Michigan. Since
-        1971, the university has issued permits to unicorn questers.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </div>
     ),
   },
@@ -57,7 +47,7 @@ export default function Faq() {
     AOS.refresh();
   }, [])
   return (
-    <section id="faq" sx={{ variant: 'section.faq' }} data-aos="fade-left"
+    <section id="faq" sx={{ variant: 'section.faq' }} data-aos="zoom-in-down"
     data-aos-offset="300"
     data-aos-easing="ease-in-sine">
       <Container>

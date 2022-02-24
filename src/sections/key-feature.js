@@ -31,9 +31,9 @@ const data = [
     id: 2,
     imgSrc: Vector,
     altText: 'Vector',
-    title: 'Digital Wearables',
+    title: 'Digital and Physical Wearables',
     text:
-      'Get your digital fashion wearables as well as its physical version with equal value',
+      'Get your digital fashion wearables for your in-game avatars as well as its physical version with equal value. Experience fashion that transcends through your digital and physical self.',
   },
   {
     id: 3,
@@ -61,7 +61,7 @@ export default function KeyFeature() {
   }, [])
 
   return (
-    <section sx={{ variant: 'section.keyFeature' }} id="feature" data-aos="fade-right" data-aos-offset="300"
+    <section sx={{ variant: 'section.keyFeature' }} id="feature" data-aos="flip-left" data-aos-offset="300"
     data-aos-easing="ease-in-sine">
       
       <Container sx={styles.container}>

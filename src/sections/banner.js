@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import ModalVideo from 'react-modal-video';
 import { Link } from 'components/link';
 import { FaPlayCircle } from 'react-icons/fa';
-import BannerBG from 'assets/bannerBg.png';
+import BannerBG from 'assets/video1.mp4';
 import BannerThumb from 'assets/one.png';
 
 
