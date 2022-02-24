@@ -61,7 +61,7 @@ export default function KeyFeature() {
   }, [])
 
   return (
-    <section sx={{ variant: 'section.keyFeature' }} id="feature" data-aos="flip-left" data-aos-offset="300"
+    <section sx={{ variant: 'section.keyFeature' }} id="feature" data-aos="fade-up-left" data-aos-offset="300"
     data-aos-easing="ease-in-sine">
       
       <Container sx={styles.container}>

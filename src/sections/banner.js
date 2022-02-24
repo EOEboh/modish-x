@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import ModalVideo from 'react-modal-video';
 import { Link } from 'components/link';
 import { FaPlayCircle } from 'react-icons/fa';
-import BannerBG from 'assets/video1.mp4';
+import BannerBG from 'assets/item6.jpg';
 import BannerThumb from 'assets/one.png';
 
 
@@ -107,6 +107,7 @@ const styles = {
     container: {
       display: 'flex',
       mt: '1rem',
+      color: 'primary'
     },
     contentBox: {
       width: ['100%', null, '85%', '55%', '50%', '55%'],
