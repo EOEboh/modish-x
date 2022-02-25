@@ -70,7 +70,7 @@ export default {
       px: [4, 6],
     },
     header: {
-      color: '#02073E',
+      color: '#ffffff',
       fontWeight: 'normal',
       py: 3,
       position: 'absolute',
@@ -86,26 +86,32 @@ export default {
   section: {
     keyFeature: {
       py: [8, null, 9, null, null, 10],
+      backgroundColor: '#ffffff'
     },
     feature: {
       py: [8, null, 9, null, null, 10],
+      backgroundColor: '#ffffff'
     },
     partner: {
       pt: [2, null, null, 5],
       pb: [8, null, 9, null, null, 10],
+      backgroundColor: '#ffffff'
     },
     services: {
       py: [8, null, 9, null, null, 10],
       overflow: 'hidden',
+      backgroundColor: '#ffffff'
     },
     securePayment: {
       overflow: 'hidden',
       position: 'relative',
       pt: 9,
+      backgroundColor: '#ffffff'
     },
     faq: {
       py: [8, null, 9, null, null, 10],
-      p: '1rem !important'
+      p: '1rem !important',
+      backgroundColor: '#ffffff'
     },
   },
   sectionHeader: {
@@ -159,6 +165,7 @@ export default {
       lineHeight: 1.2,
       fontWeight: 700,
       mb: [5, null, null, null, '30px'],
+      
     },
     heroSecondary: {
       color: 'white',

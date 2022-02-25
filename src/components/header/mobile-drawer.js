@@ -18,7 +18,7 @@ import menuItems from './header.data';
 
 const social = [
   {
-    path: 'https://twitter.com/modishx_io',
+    path: 'https://www.twitter.com/modishx_io',
     icon: <FaTwitter />,
   },
   {
@@ -26,7 +26,7 @@ const social = [
     icon: <FaTelegram />,
   },
   {
-    path: 'https://instagram.com/modishx_io',
+    path: 'https://www.instagram.com/modishx_io',
     icon: <FaInstagram />,
   },
   
@@ -78,7 +78,7 @@ const MobileDrawer = () => {
             <Box sx={styles.social}>
               {social.map(({ path, icon }, i) => (
                 <Box as="span" key={i} sx={styles.social.icon}>
-                  <Link to={path.path}>{icon}</Link>
+                  <Link to={path}>{icon}</Link>
                 </Box>
               ))}
             </Box>
@@ -138,20 +138,21 @@ const styles = {
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
+    color: 'primary',
     a: {
       fontSize: '16px',
       fontWeight: '500',
-      color: 'text',
+      color: '#9d3493',
       py: '15px',
       cursor: 'pointer',
       borderBottom: '1px solid #e8e5e5',
       transition: 'all 0.25s',
       '&:hover': {
-        color: 'secondary',
-        backgroundColor: 'primary'
+        color: '#DDB013',
+        backgroundColor: ''
       },
       '&.active': {
-        color: 'secondary',
+        color: '#DDB013',
       },
     },
   },
@@ -174,7 +175,7 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      color: 'text',
+      color: '#9d3493',
       fontSize: 14,
       mr: '15px',
       transition: 'all 0.25s',
@@ -183,7 +184,7 @@ const styles = {
         mr: '0',
       },
       '&:hover': {
-        color: 'secondary',
+        color: '#DDB013',
       },
     },
   },

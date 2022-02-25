@@ -124,7 +124,7 @@ const styles = {
       alignItems: 'center',
       flexShrink: 0,
       pt: [0, null, null, null, null, null, 5, 7],
-      padding: '1rem'
+      padding: '2rem'
       
     },
     imageBox: {
