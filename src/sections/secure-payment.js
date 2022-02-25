@@ -8,10 +8,9 @@ import PaymentThumb from 'assets/paymentThumb.png';
 import PaymentPattern from 'assets/payment-pattern.png';
 
 const data = {
-  subTitle: 'PAYMENT SECURITY',
-  title: 'Secure Payment Transaction System with #1 Ranking',
-  description:
-    'Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever. Get your tests delivered at let home collect sample.',
+  subTitle: 'PAYMENT ',
+  title: 'Secure Payment Transaction ',
+  description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   btnName: 'Learn More',
   btnURL: '#',
 };

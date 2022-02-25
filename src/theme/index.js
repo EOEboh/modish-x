@@ -121,9 +121,10 @@ export default {
     alignItems: 'center',
     mt: -1,
     marginBottom: ['50px', null, '60px', null, '65px', '75px'],
+    color: '#000000',
     title: {
       fontSize: ['24px', null, '28px', null, null, '32px', null, '36px'],
-      color: 'heading_secondary',
+      color: '#000000',
       lineHeight: [1.3, null, null, 1.2],
       textAlign: 'center',
       fontWeight: '700',
@@ -132,7 +133,7 @@ export default {
 
     subTitle: {
       fontSize: [0, null, '14px'],
-      color: 'heading',
+      color: '#000000',
       textAlign: 'center',
       letterSpacing: ['1.5px', null, '2px'],
       textTransform: 'uppercase',
@@ -148,7 +149,7 @@ export default {
       fontWeight: 'heading',
       fontSize: 4,
       letterSpacing: 'heading',
-      color: 'heading',
+      color: '#000000',
     },
     heroPrimary: {
       color: 'white',

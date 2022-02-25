@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { useEffect } from 'react';
-import { jsx, Container, Box, Grid, Text, Heading, Image } from 'theme-ui';
+import { jsx, Container, Box, Grid, Text, Heading, Image, Button } from 'theme-ui';
 import TextFeature from 'components/text-feature';
 import AboutImg from 'assets/tunmise.jpg';
-;
+// import Whitepaper from '/files/whitepaper.pdf';
 
 // Animate on scroll library
 import AOS from 'aos';
@@ -40,6 +40,9 @@ export default function About() {
     AOS.init({ duration: 2500});
     AOS.refresh();
   }, [])
+
+
+
   return (
     <section sx={styles.about} data-aos='fade-left'>
       <Container sx={styles.containerBox}>
@@ -55,7 +58,7 @@ export default function About() {
             <Image src={AboutImg} altText='About Us' />
           </Box>
 
-          <Grid gap="15px 0" columns={2} gap='2px' sx={styles.grid}>
+          <Grid gap="15px 0" columns={2} rows={6} gap={2} width={200} sx={styles.grid}>
             {data.features.map((item) => (
               <Box sx={styles.card} key={item.id}>
                 
@@ -66,6 +69,18 @@ export default function About() {
               </Box>
             ))}
           </Grid>
+        </Box>
+        <Box sx={styles.downloadBtn}>
+          <Button style={{color: '#000000', backgroundColor: '#DDB013', cursor: 'pointer'}}>
+          <a
+            href="/files/modishx-whitepaper.pdf"
+            alt="alt text"
+            target="_blank"
+             rel="noopener noreferrer"
+             download>
+               See Our Whitepaper
+          </a>
+          </Button>
         </Box>
       </Container>
     </section>
@@ -83,14 +98,18 @@ const styles = {
       top: ['auto', null, null, '50%'],
       bottom: ['100px', 0, null, 'auto'],
       left: 0,
-      background: 'linear-gradient(-157deg, #F6FAFD, #F9FCFC) !important',
-      height: [350, 550, '60%'],
-      width: '50%',
-      zIndex: -1,
-      borderTopRightRadius: '50%',
-      borderBottomRightRadius: '50%',
-      transform: ['translateY(0)', null, null, 'translateY(-50%)'],
+      // background: 'linear-gradient(-157deg, #F6FAFD, #F9FCFC) !important',
+      // height: [350, 550, '60%'],
+      // width: '50%',
+      // zIndex: -1,
+      // borderTopRightRadius: '50%',
+      // borderBottomRightRadius: '50%',
+      // transform: ['translateY(0)', null, null, 'translateY(-50%)'],
     },
+    a:{
+      textDecoration: 'none',
+      color: 'background'
+    }
   },
   containerBox: {
     display: 'flex',
@@ -146,6 +165,9 @@ const styles = {
         '0px 8px 24px rgba(69, 88, 157, 0.07)',
       ],
     },
+  },
+  downloadBtn:{
+      m: '0.4rem',
   },
 
   img: {

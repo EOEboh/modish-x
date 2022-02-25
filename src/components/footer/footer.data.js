@@ -1,98 +1,69 @@
+
 export default [
   {
     header: 'About Us',
     items: [
       {
         path: '/',
-        label: 'Support Center',
-      },
-      {
-        path: '/',
-        label: 'Customer Support',
-      },
-      {
-        path: '/',
-        label: 'About Us',
-      },
-      {
-        path: '/',
-        label: 'Copyright',
-      },
-      {
-        path: '/',
-        label: 'Popular Campaign',
+        label: 'Our Whitepaper',
       },
     ],
   },
   {
-    header: 'Our Information',
+    header: 'Customer Support',
     items: [
       {
-        path: '/',
+        path: '#',
         label: 'Return Policy ',
       },
       {
-        path: '/',
+        path: '#',
         label: 'Privacy Policy',
       },
       {
-        path: '/',
+        path: '#',
         label: 'Terms & Conditions',
       },
       {
-        path: '/',
-        label: 'Site Map',
+        path: '#',
+        label: 'Store Hours:',
       },
       {
-        path: '/',
-        label: 'Store Hours',
+        path: '#',
+        label: 'Mon - Fri',
+      },
+      {
+        path: '#',
+        label: ' Sat & Sun',
       },
     ],
   },
   {
-    header: 'My Account',
+    header: 'Reach Us On Social Media',
     items: [
       {
         path: '/',
-        label: 'Press inquiries',
+        label: 'Twitter',
       },
       {
         path: '/',
-        label: 'Social media ',
+        label: 'Instagram ',
       },
       {
         path: '/',
-        label: 'directories',
+        label: 'Telegram',
       },
-      {
-        path: '/',
-        label: 'Images & B-roll',
-      },
-      {
-        path: '/',
-        label: 'Permissions',
-      },
+      
     ],
   },
   {
-    header: 'Policy',
+    header: 'Mail',
     items: [
       {
         path: '/',
-        label: 'Application security',
+        label: 'E-mail Us',
       },
-      {
-        path: '/',
-        label: 'Software principles',
-      },
-      {
-        path: '/',
-        label: 'Unwanted software policy',
-      },
-      {
-        path: '/',
-        label: 'Responsible supply chain',
-      },
+    
     ],
   },
 ];

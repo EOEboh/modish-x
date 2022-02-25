@@ -18,15 +18,15 @@ import menuItems from './header.data';
 
 const social = [
   {
-    path: 'https://www.twitter.com/modishx_io',
+    path: "https://www.twitter.com/modishx_io" ,
     icon: <FaTwitter />,
   },
   {
-    path: 'https://t.me/ModishXOfficial',
+    path: "https://t.me/ModishXOfficial",
     icon: <FaTelegram />,
   },
   {
-    path: 'https://www.instagram.com/modishx_io',
+    path: "https://www.instagram.com/modishx_io",
     icon: <FaInstagram />,
   },
   

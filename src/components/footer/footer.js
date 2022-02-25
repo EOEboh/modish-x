@@ -11,13 +11,14 @@ export default function Footer() {
             <Box sx={styles.footer.menus} key={i}>
               <Heading sx={styles.footer.heading}>{header}</Heading>
               <nav>
-                {items.map(({ path, label }, i) => (
+                {items.map(({ path, label, icon }, i) => (
                   <Link
                     path={path}
                     key={i}
                     label={label}
                     sx={styles.footer.link}
                   />
+                  
                 ))}
               </nav>
             </Box>
@@ -26,8 +27,8 @@ export default function Footer() {
       </Container>
       <Text sx={styles.footer.copyright}>
         All right reserved - Design & Developed by
-        <Link path="https://redq.io/" target="_blank">
-          RedQ, Inc
+        <Link path="https://www.github.com/EOEboh" target="_blank">
+          Emmanuel Eboh &copy; {new Date().getFullYear()}
         </Link>
       </Text>
     </footer>
@@ -39,6 +40,7 @@ const styles = {
     container: {
       width: '100%',
       alignItems: 'stretch',
+      p: '1rem'
     },
     footerTopArea: {
       borderTop: '1px solid',

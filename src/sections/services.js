@@ -71,7 +71,7 @@ const styles = {
   workflow: {
     padding: '1rem',
     marginTop: '1rem',
-    backgroundColor: 'transparent',
+    backgroundColor: '#ffffff',
     // backgroundImage: `url(${PatternBG})`,
     backgroundRepeat: `no-repeat`,
     backgroundPosition: 'center center',
@@ -83,8 +83,8 @@ const styles = {
       content: '""',
       top: 0,
       right: 0,
-      background:
-        'linear-gradient(-45deg, rgba(42,72,125, 0.3) 25%, transparent 25%, transparent 50%, rgba(157,52,147, 0.3) 50%, rgba(221,176,19, 0.3) 75%, transparent 75%, transparent)',
+      // background:
+      //   'linear-gradient(-45deg, rgba(42,72,125, 0.3) 25%, transparent 25%, transparent 50%, rgba(157,52,147, 0.3) 50%, rgba(221,176,19, 0.3) 75%, transparent 75%, transparent)',
       width: '100%',
       backgroundSize: '350px 350px',
       height: '100%',
