@@ -4,7 +4,7 @@ import { jsx, Container, Flex, Button } from 'theme-ui';
 import { jsx as xs } from '@emotion/react';
 import { Link } from 'react-scroll';
 import Logo from 'components/logo';
-import LogoDark from 'assets/modish-black.png';
+import LogoDark from 'assets/modish-purple.jpg';
 import LogoWhite from 'assets/modish-white.png';
 import { DrawerProvider } from '../../contexts/drawer/drawer.provider';
 import MobileDrawer from './mobile-drawer';
@@ -133,7 +133,7 @@ const styles = {
       cursor: 'pointer',
       lineHeight: '1.2',
       '&.active': {
-        color: 'text',
+        color: 'secondary',
       },
     },
   },

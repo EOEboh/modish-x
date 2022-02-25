@@ -8,28 +8,28 @@ import { Link } from 'react-scroll';
 import {
   FaFacebookF,
   FaTwitter,
-  FaGithubAlt,
-  FaDribbble,
+  FaTelegram,
+  FaInstagram,
+  // FaTiktok
 } from 'react-icons/fa';
+// SiTiktok
+
 import menuItems from './header.data';
 
 const social = [
   {
-    path: '/',
-    icon: <FaFacebookF />,
-  },
-  {
-    path: '/',
+    path: 'https://twitter.com/modishx_io',
     icon: <FaTwitter />,
   },
   {
-    path: '/',
-    icon: <FaGithubAlt />,
+    path: 'https://t.me/ModishXOfficial',
+    icon: <FaTelegram />,
   },
   {
-    path: '/',
-    icon: <FaDribbble />,
+    path: 'https://instagram.com/modishx_io',
+    icon: <FaInstagram />,
   },
+  
 ];
 
 const MobileDrawer = () => {
@@ -52,7 +52,7 @@ const MobileDrawer = () => {
       }
       open={state.isOpen}
       toggleHandler={toggleHandler}
-      closeButton={<IoMdClose size="24px" color="#000000" />}
+      closeButton={<IoMdClose size="24px" color='#9d3493' />}
       drawerStyle={styles.drawer}
       closeBtnStyle={styles.close}
     >
@@ -78,7 +78,7 @@ const MobileDrawer = () => {
             <Box sx={styles.social}>
               {social.map(({ path, icon }, i) => (
                 <Box as="span" key={i} sx={styles.social.icon}>
-                  <Link to={path}>{icon}</Link>
+                  <Link to={path.path}>{icon}</Link>
                 </Box>
               ))}
             </Box>
@@ -98,6 +98,7 @@ const styles = {
     width: '26px',
     cursor: 'pointer',
     margin: '1rem',
+    color:'#9d3493',
     '@media screen and (min-width: 760px)': {
       display: 'none',
       
@@ -108,6 +109,7 @@ const styles = {
     width: '100%',
     height: '100%',
     backgroundColor: 'dark',
+    // opacity: '0.5'
   },
 
   close: {
@@ -129,6 +131,7 @@ const styles = {
     pt: '100px',
     pb: '40px',
     px: '30px',
+
   },
 
   menu: {
@@ -138,13 +141,14 @@ const styles = {
     a: {
       fontSize: '16px',
       fontWeight: '500',
-      color: 'text_white',
+      color: 'text',
       py: '15px',
       cursor: 'pointer',
       borderBottom: '1px solid #e8e5e5',
       transition: 'all 0.25s',
       '&:hover': {
         color: 'secondary',
+        backgroundColor: 'primary'
       },
       '&.active': {
         color: 'secondary',
