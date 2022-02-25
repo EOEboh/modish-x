@@ -40,7 +40,7 @@ const styles = {
     container: {
       width: '100%',
       alignItems: 'stretch',
-      p: '1rem'
+      p: '1rem',
     },
     footerTopArea: {
       borderTop: '1px solid',
@@ -60,7 +60,7 @@ const styles = {
 
     heading: {
       fontSize: [3, null, null, 4],
-      color: 'text_secondary',
+      color: 'primary',
       fontWeight: '500',
       mb: [3, 4, 5, null, 6],
       lineHeight: '1.35',
